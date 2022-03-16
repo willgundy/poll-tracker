@@ -44,6 +44,7 @@ To Do:
   - button finish poll
     - add card with results to the past polls section
     - remove info from current poll section
+4. Add CSS/Styling
 
 HTML Outline
 - body
