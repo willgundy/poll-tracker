@@ -102,6 +102,8 @@ function displayCurrentPoll() {
 }
 
 function displayFinishedPoll() {
+    pastPollDiv.textContent = '';
+
     for (let poll of pastPolls) {
         const pollEl = renderPastPoll(poll);
         pastPollDiv.append(pollEl);
