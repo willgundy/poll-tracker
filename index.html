@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Poll Tracker</title>
 </head>
 
 <body>
     <header>
+        <h1>Make a Poll!</h1>
     </header>
     <main>
         <section class="pollSection">
-            <h2>Add a Poll</h2>
+            <h2>Create a New Poll</h2>
             <label for="question">
                 Question
                 <input type="text" id="question">
@@ -34,19 +35,25 @@
         </section>
         <section class="pollSection">
             <h2>Current Poll</h2>
-            <h3 id="currentQuestion">Current Question</h3>
-            <div>
-                <div>
-                    <p id="option1"></p>
-                    <p id="result1"></p>
-                    <button id="result1AddBtn">+</button>
-                    <button id="result1SubtractBtn">-</button>
-                </div>
-                <div>
-                    <p id="option2"></p>
-                    <p id="result2"></p>
-                    <button id="result2AddBtn">+</button>
-                    <button id="result2SubtractBtn">-</button>
+            <div class="pollCard">
+                <h3 id="currentQuestion"></h3>
+                <div class="optionsContainer">
+                    <div class="optionDiv">
+                        <p id="option1" class="option"></p>
+                        <p id="result1"></p>
+                        <div class="buttonDiv hidden">
+                            <button id="result1AddBtn">+</button>
+                            <button id="result1SubtractBtn">-</button>
+                        </div>
+                    </div>
+                    <div class="optionDiv">
+                        <p id="option2" class="option"></p>
+                        <p id="result2"></p>
+                        <div class="buttonDiv hidden">
+                            <button id="result2AddBtn">+</button>
+                            <button id="result2SubtractBtn">-</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button id="finishBtn">Finish Poll</button>

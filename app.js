@@ -21,6 +21,8 @@ const option2Input = document.getElementById('option2Input');
 
 const pastPollDiv = document.getElementById('pastPollsContainer');
 
+const buttonDiv = document.querySelectorAll('.buttonDiv');
+
 // let state
 let pastPolls = [];
 let question = '';
@@ -41,6 +43,8 @@ submitButton.addEventListener('click', () => {
     question = questionInput.value;
     option1 = option1Input.value;
     option2 = option2Input.value;
+
+    buttonDiv.forEach(button => button.classList.remove('hidden'));
 });
 
 finishPollButton.addEventListener('click', () => {
@@ -128,4 +132,5 @@ function resetCurrentPoll() {
     questionInput.value = '';
     option1Input.value = '';
     option2Input.value = '';
+    buttonDiv.forEach(button => button.classList.add('hidden'));
 }
