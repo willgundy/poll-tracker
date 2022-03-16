@@ -9,63 +9,61 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Poll Tracker</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
+        <h1>Make a Poll!</h1>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+        <section class="pollSection">
+            <h2>Create a New Poll</h2>
+            <label for="question">
+                Question
+                <input type="text" id="question">
+            </label>
+            <label for="option1">
+                Option 1
+                <input type="text" id="option1Input">
+            </label>
+            <label for="option2">
+                Option 2
+                <input type="text" id="option2Input">
+            </label>
+            <button id="submitBtn">Submit Poll</button>
+        </section>
+        <section class="pollSection">
+            <h2>Current Poll</h2>
+            <div class="pollCard">
+                <h3 id="currentQuestion"></h3>
+                <div class="optionsContainer">
+                    <div class="optionDiv">
+                        <p id="option1" class="option"></p>
+                        <p id="result1"></p>
+                        <div class="buttonDiv hidden">
+                            <button id="result1AddBtn">+</button>
+                            <button id="result1SubtractBtn">-</button>
+                        </div>
+                    </div>
+                    <div class="optionDiv">
+                        <p id="option2" class="option"></p>
+                        <p id="result2"></p>
+                        <div class="buttonDiv hidden">
+                            <button id="result2AddBtn">+</button>
+                            <button id="result2SubtractBtn">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="finishBtn">Finish Poll</button>
+        </section>
+        <section class="pollSection">
+            <h2>Past Polls</h2>
+            <div id="pastPollsContainer">
+            </div>
         </section>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
-    </footer>
 
     <script type="module" src="./app.js"></script>
 </body>

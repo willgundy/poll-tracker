@@ -40,31 +40,30 @@ main {
 }
 
 section {
-    background-color: var(--color5);
-    max-width: 80%;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content: center;
     height: var(--header-height);
     box-shadow: var(--shadow);
+    background-color: black;
+    color: white;
 }
 
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+h3 {
+    margin: 0;
 }
 
 .gutter-right {
@@ -76,7 +75,12 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.option {
+    text-decoration: underline;
 }
   
 footer {
@@ -88,4 +92,52 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.pollCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 30vw;
+    min-height: 30vh;
+    box-shadow: var(--shadow);
+    margin: 20px;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    min-width: 20vw;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.optionDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 20vw;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    margin: 10px;
 }

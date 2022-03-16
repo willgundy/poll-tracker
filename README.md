@@ -24,3 +24,56 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+Wireframe:
+![wireframe](assets/wireframe.png)
+
+To Do:
+1. HTML Elements
+  - outline below
+2. Event Listeners
+  - submit button - add poll input to current poll section
+  - increase/decrease buttons - increase result numbers for different options
+  - finish poll button - add results to the past polls section
+3. DOM Updates
+  - submit button 
+    - update current poll section to have info from poll input
+    - remove info from poll input section
+  - increase/decrease buttons
+    - update result numbers for option 1 and option 2
+  - button finish poll
+    - add card with results to the past polls section
+    - remove info from current poll section
+4. Add CSS/Styling
+
+HTML Outline
+- body
+  - main
+    - section poll input
+      - h2
+      - input1
+      - input2
+      - button
+    - section current poll
+      - h2
+      - div - options
+        - div - option1
+          - p
+          - button - increase
+          - button - decrease
+        - div - option2
+          - p
+          - button - increase
+          - button - decrease
+      - button
+    - section past polls
+      - div - past poll card
+        - h2
+        - div - result1
+          - p option 1
+          - p result 1
+        - div - result2
+          - p option 2
+          - p result 2
+        
+
